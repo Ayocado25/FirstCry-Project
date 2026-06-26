@@ -1,0 +1,18 @@
+.root { display: flex; flex-direction: column; gap: var(--space-5); }
+.predictionGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space-4); }
+.predCard { position: relative; overflow: hidden; }
+.predCard::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: linear-gradient(90deg, var(--color-primary), var(--color-secondary)); }
+.predHeader { display: flex; align-items: center; gap: 8px; margin-bottom: var(--space-3); }
+.predHeader h3 { font-size: var(--font-size-sm); font-weight: 700; }
+.predValue { font-size: 36px; font-weight: 800; color: var(--color-primary); margin-bottom: 4px; }
+.predMeta { font-size: var(--font-size-xs); color: var(--color-text-muted); }
+.trend { display: flex; align-items: center; gap: 6px; font-size: var(--font-size-xs); font-weight: 600; margin-top: var(--space-3); }
+.insightsList { display: flex; flex-direction: column; gap: var(--space-4); }
+.insight { display: flex; gap: var(--space-3); padding: var(--space-3); background: var(--color-surface-2); border-radius: var(--radius-md); border-left: 3px solid var(--color-info); }
+.insightIcon { font-size: 24px; flex-shrink: 0; }
+.insightText { flex: 1; }
+.insightText strong { display: block; margin-bottom: 4px; }
+.insightText p { font-size: var(--font-size-sm); color: var(--color-text-secondary); margin-bottom: 8px; }
+.recommendationsList { display: flex; flex-direction: column; gap: var(--space-3); }
+.recommendation { display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3); background: var(--color-surface-2); border-radius: var(--radius-md); }
+.recText { font-size: var(--font-size-sm); color: var(--color-text-secondary); }

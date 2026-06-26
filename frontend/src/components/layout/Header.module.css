@@ -1,0 +1,59 @@
+.header {
+  height: var(--header-height);
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-6);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  gap: var(--space-4);
+}
+
+.left { display: flex; align-items: center; gap: var(--space-4); }
+
+.pageTitle {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+}
+.pageSubtitle {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  margin-top: 1px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.greeting {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+.greetText {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+.greetText strong { color: var(--color-text-primary); font-weight: 600; }
+
+.roleChip {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  text-transform: capitalize;
+}
+
+@media (max-width: 768px) {
+  .header { padding: 0 var(--space-4) 0 64px; }
+  .greeting { display: none; }
+}

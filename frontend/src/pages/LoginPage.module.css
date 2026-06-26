@@ -1,0 +1,120 @@
+.root {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Left panel */
+.left {
+  flex: 1;
+  background: linear-gradient(145deg, #6C63FF 0%, #4ECDC4 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 56px;
+  gap: 48px;
+  color: #fff;
+}
+.branding { text-align: center; }
+.logo { font-size: 64px; margin-bottom: 16px; }
+.appName { font-size: 28px; font-weight: 800; letter-spacing: -0.5px; }
+.appTagline { font-size: 16px; opacity: 0.85; margin-top: 4px; }
+
+.featureList { display: flex; flex-direction: column; gap: 14px; max-width: 320px; width: 100%; }
+.featureItem {
+  display: flex; align-items: center; gap: 12px;
+  font-size: 15px; font-weight: 500; opacity: 0.92;
+}
+.featureDot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: rgba(255,255,255,0.7); flex-shrink: 0;
+}
+
+/* Right panel */
+.right {
+  width: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 40px;
+  background: var(--color-bg);
+}
+.card {
+  width: 100%;
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
+  padding: 40px 36px;
+  box-shadow: var(--shadow-lg);
+}
+.tabs { display: flex; gap: 0; margin-bottom: 28px; border-bottom: 2px solid var(--color-border); }
+.tab { 
+  padding: 12px 18px; font-size: var(--font-size-sm); font-weight: 600;
+  color: var(--color-text-secondary); background: none; border: none; cursor: pointer;
+  border-bottom: 3px solid transparent; margin-bottom: -2px;
+  transition: all var(--transition-fast); display: flex; align-items: center; gap: 6px;
+}
+.tab:hover { color: var(--color-primary); }
+.tabActive { color: var(--color-primary); border-bottom-color: var(--color-primary); }
+
+.heading { font-size: 26px; font-weight: 800; color: var(--color-text-primary); }
+.sub { font-size: var(--font-size-sm); color: var(--color-text-secondary); margin-top: 4px; }
+.note { font-size: var(--font-size-xs); color: var(--color-warning); background: var(--color-warning-light); padding: 8px 12px; border-radius: var(--radius-md); margin-top: 12px; margin-bottom: 20px; border-left: 3px solid var(--color-warning); }
+
+.serverErr {
+  background: var(--color-danger-light);
+  color: var(--color-danger);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  font-size: var(--font-size-sm);
+  margin-top: 16px;
+  border: 1px solid #FECACA;
+}
+
+.form { display: flex; flex-direction: column; gap: 20px; margin-top: 28px; }
+
+.field { display: flex; flex-direction: column; gap: 6px; }
+.label { font-size: var(--font-size-sm); font-weight: 600; color: var(--color-text-primary); }
+.input {
+  height: 44px;
+  padding: 0 14px;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
+  background: var(--color-surface);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  width: 100%;
+}
+.input:focus { outline: none; border-color: var(--color-primary); box-shadow: var(--shadow-focus); }
+.inputErr { border-color: var(--color-danger); }
+.errMsg { font-size: var(--font-size-xs); color: var(--color-danger); }
+
+.pwdWrap { position: relative; }
+.pwdWrap .input { padding-right: 44px; }
+.eyeBtn {
+  position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+  color: var(--color-text-muted); display: flex; align-items: center;
+}
+.eyeBtn:hover { color: var(--color-text-primary); }
+
+.submitBtn { margin-top: 8px; width: 100%; justify-content: center; }
+
+.demoSection { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--color-border); }
+.demoTitle { font-size: var(--font-size-xs); font-weight: 600; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px; }
+.demoGrid { display: flex; gap: 8px; flex-wrap: wrap; }
+.demoBtn {
+  padding: 6px 14px; border-radius: var(--radius-full);
+  border: 1.5px solid var(--color-border);
+  font-size: var(--font-size-xs); font-weight: 600;
+  color: var(--color-text-secondary);
+  background: var(--color-surface);
+  transition: all var(--transition-fast);
+}
+.demoBtn:hover { border-color: var(--color-primary); color: var(--color-primary); background: var(--color-primary-light); }
+
+@media (max-width: 768px) {
+  .root { flex-direction: column; }
+  .left { padding: 40px 24px; }
+  .right { width: 100%; padding: 24px 16px; }
+  .card { padding: 28px 20px; }
+}

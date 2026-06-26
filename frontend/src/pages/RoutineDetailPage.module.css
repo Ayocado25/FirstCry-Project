@@ -1,0 +1,75 @@
+/* RoutineDetailPage.module.css */
+.root { display: flex; flex-direction: column; gap: var(--space-5); }
+.topBar { display: flex; align-items: center; justify-content: space-between; }
+.actions { display: flex; gap: var(--space-3); }
+
+.childCard {}
+.childRow { display: flex; align-items: center; gap: var(--space-4); flex-wrap: wrap; margin-bottom: var(--space-5); }
+.childMeta { flex: 1; }
+.childName { font-size: var(--font-size-2xl); font-weight: 800; }
+.classroom { font-size: var(--font-size-sm); color: var(--color-text-muted); }
+.dateBadge { font-size: var(--font-size-sm); font-weight: 600; color: var(--color-text-secondary); }
+.badges { display: flex; gap: 8px; }
+
+.moodEditor { display: flex; flex-direction: column; gap: var(--space-4); padding-top: var(--space-4); border-top: 1px solid var(--color-border); }
+.formField { display: flex; flex-direction: column; gap: 6px; }
+.formLabel { font-size: var(--font-size-sm); font-weight: 600; }
+.moodPills { display: flex; flex-wrap: wrap; gap: 8px; }
+.moodPill {
+  padding: 6px 14px; border-radius: var(--radius-full);
+  border: 1.5px solid var(--color-border);
+  font-size: var(--font-size-sm); font-weight: 500; cursor: pointer;
+  transition: all var(--transition-fast); background: var(--color-surface);
+}
+.moodPill:hover { border-color: var(--color-primary); }
+.moodPillActive { font-weight: 700; }
+.textarea {
+  padding: 10px 12px; border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md); font-size: var(--font-size-base);
+  background: var(--color-surface); width: 100%; resize: vertical;
+  font-family: var(--font-family);
+}
+.textarea:focus { outline: none; border-color: var(--color-primary); }
+
+.sectionsGrid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); }
+@media (max-width: 900px) { .sectionsGrid { grid-template-columns: 1fr; } }
+
+.section { overflow: hidden; }
+.sectionHead { display: flex; align-items: center; justify-content: space-between; padding: var(--space-4) var(--space-4) 0; }
+.sectionTitle { font-size: var(--font-size-md); font-weight: 700; }
+.sectionCount { font-size: var(--font-size-sm); color: var(--color-text-muted); font-weight: 400; margin-left: 4px; }
+.sectionBody { padding: var(--space-3) var(--space-4) var(--space-4); display: flex; flex-direction: column; gap: 6px; }
+
+.logItem {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  padding: 10px 12px; border-radius: var(--radius-md);
+  background: var(--color-surface-2); border: 1px solid var(--color-border);
+  gap: var(--space-3);
+}
+.logItemContent { display: flex; flex-direction: column; gap: 2px; font-size: var(--font-size-sm); }
+.logItemContent strong { font-weight: 600; }
+.logItemContent span { color: var(--color-text-secondary); }
+.subNote { font-style: italic; font-size: var(--font-size-xs) !important; }
+.time { font-size: var(--font-size-xs) !important; color: var(--color-text-muted) !important; }
+.actType { font-size: var(--font-size-xs) !important; background: var(--color-primary-light); color: var(--color-primary); padding: 1px 6px; border-radius: var(--radius-full); display: inline-block; width: fit-content; }
+
+.deleteBtn { color: var(--color-text-muted); padding: 2px; border-radius: var(--radius-sm); transition: color var(--transition-fast); flex-shrink: 0; margin-top: 2px; }
+.deleteBtn:hover { color: var(--color-danger); }
+
+.emptyText { font-size: var(--font-size-sm); color: var(--color-text-muted); text-align: center; padding: var(--space-4); }
+
+/* Sub-log forms inside modal */
+.subForm { display: flex; flex-direction: column; gap: var(--space-4); }
+.subField { display: flex; flex-direction: column; gap: 5px; }
+.subLabel { font-size: var(--font-size-sm); font-weight: 600; color: var(--color-text-primary); }
+.inp {
+  height: 40px; padding: 0 12px; border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md); font-size: var(--font-size-base);
+  background: var(--color-surface); width: 100%;
+}
+.inp:focus { outline: none; border-color: var(--color-primary); box-shadow: var(--shadow-focus); }
+
+/* Summary */
+.summaryTitle { font-size: var(--font-size-md); font-weight: 700; margin-bottom: var(--space-3); }
+.summaryText { font-size: var(--font-size-base); line-height: 1.7; color: var(--color-text-secondary); }
+.sentAt { font-size: var(--font-size-xs); color: var(--color-text-muted); margin-top: var(--space-3); }

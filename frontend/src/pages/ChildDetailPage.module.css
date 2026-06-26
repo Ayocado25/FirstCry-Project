@@ -1,0 +1,30 @@
+.root { display: flex; flex-direction: column; gap: var(--space-5); }
+.back { align-self: flex-start; }
+.profileCard {}
+.profileTop { display: flex; align-items: flex-start; gap: var(--space-4); flex-wrap: wrap; margin-bottom: var(--space-5); }
+.profileInfo { flex: 1; }
+.childName { font-size: var(--font-size-3xl); font-weight: 800; }
+.profileMeta { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 8px; font-size: var(--font-size-sm); color: var(--color-text-secondary); }
+.detailGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px,1fr)); gap: var(--space-4); padding-top: var(--space-4); border-top: 1px solid var(--color-border); }
+.detailItem { display: flex; flex-direction: column; gap: 3px; }
+.detailLabel { font-size: var(--font-size-xs); font-weight: 600; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+.detailValue { font-size: var(--font-size-sm); color: var(--color-text-primary); }
+.twoCol { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); }
+@media (max-width: 768px) { .twoCol { grid-template-columns: 1fr; } }
+.sectionHead { display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-4); }
+.sectionTitle { font-size: var(--font-size-md); font-weight: 700; display: flex; align-items: center; gap: 6px; }
+.emptyText { font-size: var(--font-size-sm); color: var(--color-text-muted); text-align: center; padding: var(--space-4); }
+.allergyList { display: flex; flex-direction: column; gap: 8px; }
+.allergyItem { display: flex; align-items: flex-start; justify-content: space-between; padding: 10px 12px; background: var(--color-danger-light); border-radius: var(--radius-md); border: 1px solid #FECACA; }
+.allergyItem strong { font-size: var(--font-size-sm); }
+.delBtn { color: var(--color-text-muted); padding: 2px; border-radius: var(--radius-sm); }
+.delBtn:hover { color: var(--color-danger); }
+.parentList { display: flex; flex-direction: column; gap: 10px; }
+.parentItem { display: flex; align-items: center; gap: 12px; padding: 10px; background: var(--color-surface-2); border-radius: var(--radius-md); }
+.parentName { font-size: var(--font-size-sm); font-weight: 600; display: flex; align-items: center; }
+.parentContact { display: flex; flex-wrap: wrap; gap: 8px; font-size: var(--font-size-xs); color: var(--color-text-muted); margin-top: 2px; }
+.allergyForm { display: flex; flex-direction: column; gap: var(--space-4); }
+.field { display: flex; flex-direction: column; gap: 5px; }
+.label { font-size: var(--font-size-sm); font-weight: 600; }
+.inp { height: 40px; padding: 0 12px; border: 1.5px solid var(--color-border); border-radius: var(--radius-md); font-size: var(--font-size-base); background: var(--color-surface); width: 100%; }
+.inp:focus { outline: none; border-color: var(--color-primary); }

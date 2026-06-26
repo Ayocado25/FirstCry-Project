@@ -1,0 +1,105 @@
+.root { display: flex; flex-direction: column; gap: var(--space-6); }
+
+.kpiGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+}
+
+.twoCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+/* Attendance trend bar chart */
+.trendChart {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  height: 160px;
+  padding-bottom: 24px;
+  position: relative;
+}
+.barGroup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  height: 100%;
+}
+.barWrap {
+  flex: 1;
+  width: 100%;
+  background: var(--color-surface-2);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.bar {
+  width: 100%;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  transition: height var(--transition-slow);
+  min-height: 4px;
+}
+.barLabel { font-size: 10px; color: var(--color-text-muted); }
+.barPct { font-size: 10px; font-weight: 600; color: var(--color-text-secondary); }
+
+.noData { color: var(--color-text-muted); font-size: var(--font-size-sm); text-align: center; padding: var(--space-8) 0; }
+
+/* Mood */
+.moodList { display: flex; flex-direction: column; gap: 12px; }
+.moodRow { display: flex; align-items: center; gap: 10px; }
+.moodEmoji { font-size: 18px; flex-shrink: 0; }
+.moodLabel { font-size: var(--font-size-sm); font-weight: 500; width: 60px; flex-shrink: 0; }
+.moodBar { flex: 1; height: 8px; background: var(--color-surface-2); border-radius: var(--radius-full); overflow: hidden; }
+.moodFill { height: 100%; border-radius: var(--radius-full); transition: width var(--transition-slow); }
+.moodCount { font-size: var(--font-size-sm); font-weight: 600; color: var(--color-text-secondary); width: 24px; text-align: right; }
+
+/* Classrooms */
+.classroomGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--space-4);
+}
+.classroomCard {
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.classroomCard:hover { border-color: var(--color-primary); box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.classroomHeader { display: flex; align-items: flex-start; justify-content: space-between; }
+.classroomName { font-size: var(--font-size-md); font-weight: 700; }
+.ageGroup { font-size: var(--font-size-xs); color: var(--color-text-muted); background: var(--color-surface-2); padding: 2px 8px; border-radius: var(--radius-full); }
+.occupancyWrap { display: flex; align-items: center; gap: 8px; }
+.occupancyBar { flex: 1; height: 6px; background: var(--color-border); border-radius: var(--radius-full); overflow: hidden; }
+.occupancyFill { height: 100%; border-radius: var(--radius-full); transition: width var(--transition-slow); }
+.occupancyPct { font-size: var(--font-size-xs); font-weight: 700; color: var(--color-text-secondary); }
+.classroomStats { display: flex; justify-content: space-between; font-size: var(--font-size-xs); color: var(--color-text-secondary); }
+.classroomStats strong { color: var(--color-text-primary); }
+
+/* Task summary */
+.taskSummaryGrid { display: grid; grid-template-columns: repeat(4,1fr); gap: var(--space-4); }
+.taskSumItem { padding: var(--space-4); background: var(--color-surface-2); border-radius: var(--radius-md); display: flex; flex-direction: column; gap: 4px; }
+.taskSumCount { font-size: 28px; font-weight: 800; }
+.taskSumLabel { font-size: var(--font-size-xs); color: var(--color-text-secondary); font-weight: 500; }
+
+.viewAll { font-size: var(--font-size-sm); color: var(--color-primary); font-weight: 600; }
+.viewAll:hover { text-decoration: underline; }
+
+@media (max-width: 1024px) {
+  .kpiGrid { grid-template-columns: repeat(2,1fr); }
+  .twoCol  { grid-template-columns: 1fr; }
+  .taskSummaryGrid { grid-template-columns: repeat(2,1fr); }
+}
+@media (max-width: 600px) {
+  .kpiGrid { grid-template-columns: 1fr; }
+  .taskSummaryGrid { grid-template-columns: repeat(2,1fr); }
+}

@@ -1,0 +1,30 @@
+.root { display: flex; flex-direction: column; gap: var(--space-5); }
+.weekNav { display: flex; align-items: center; gap: var(--space-4); }
+.weekLabel { font-size: var(--font-size-sm); font-weight: 600; color: var(--color-text-secondary); flex: 1; text-align: center; }
+.calCard { overflow-x: auto; }
+.calGrid { display: grid; min-width: 700px; }
+.calCorner { background: var(--color-surface-2); border-right: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); }
+.calDayHead { padding: 10px 8px; background: var(--color-surface-2); border-right: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); text-align: center; }
+.calDayHead.today { background: var(--color-primary-light); }
+.dayName { display: block; font-size: var(--font-size-xs); font-weight: 700; color: var(--color-text-secondary); text-transform: uppercase; }
+.dayDate { display: block; font-size: var(--font-size-sm); font-weight: 600; margin-top: 2px; }
+.calRowLabel { padding: 12px 14px; border-right: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); background: var(--color-surface-2); display: flex; flex-direction: column; gap: 2px; justify-content: center; }
+.clName { font-weight: 700; font-size: var(--font-size-sm); }
+.clAge  { font-size: var(--font-size-xs); color: var(--color-text-muted); }
+.calCell { padding: 6px; border-right: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); min-height: 72px; display: flex; flex-direction: column; gap: 4px; }
+.todayCell { background: #FAFBFF; }
+.assignChip { display: flex; align-items: center; gap: 5px; padding: 4px 6px; background: var(--color-primary-light); border-radius: var(--radius-sm); border: 1px solid var(--color-primary); position: relative; }
+.assignInfo { flex: 1; min-width: 0; }
+.assignName { font-size: 11px; font-weight: 700; color: var(--color-primary); display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.assignShift { font-size: 10px; color: var(--color-text-muted); display: block; }
+.leadDot { width: 6px; height: 6px; border-radius: 50%; background: var(--color-warning); flex-shrink: 0; }
+.removeChip { font-size: 10px; color: var(--color-text-muted); padding: 0 2px; }
+.removeChip:hover { color: var(--color-danger); }
+.addSlot { width: 100%; height: 28px; border: 1.5px dashed var(--color-border); border-radius: var(--radius-sm); font-size: 16px; color: var(--color-text-muted); transition: all var(--transition-fast); }
+.addSlot:hover { border-color: var(--color-primary); color: var(--color-primary); background: var(--color-primary-light); }
+.addForm { display: flex; flex-direction: column; gap: var(--space-4); }
+.field { display: flex; flex-direction: column; gap: 5px; }
+.label { font-size: var(--font-size-sm); font-weight: 600; }
+.inp { height: 40px; padding: 0 12px; border: 1.5px solid var(--color-border); border-radius: var(--radius-md); font-size: var(--font-size-base); background: var(--color-surface); width: 100%; }
+.inp:focus { outline: none; border-color: var(--color-primary); }
+.checkRow { display: flex; align-items: center; gap: 8px; font-size: var(--font-size-sm); cursor: pointer; }
